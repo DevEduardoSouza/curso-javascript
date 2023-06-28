@@ -1,0 +1,1 @@
+Curso JavaScript #37 - Alterar conteúdo do elemento (textContent e innerHTML)

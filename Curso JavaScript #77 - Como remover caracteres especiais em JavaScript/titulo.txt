@@ -1,0 +1,1 @@
+Como remover caracteres especiais em JavaScript

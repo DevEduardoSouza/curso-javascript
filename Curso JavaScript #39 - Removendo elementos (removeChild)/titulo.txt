@@ -1,0 +1,1 @@
+Curso JavaScript #39 - Removendo elementos (removeChild)

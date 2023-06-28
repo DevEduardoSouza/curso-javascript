@@ -1,0 +1,1 @@
+Curso JavaScript #49 - Eventos click e dblclick do DOM

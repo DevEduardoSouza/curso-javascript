@@ -1,0 +1,1 @@
+Curso JavaScript #15 - Comparação de valor e tipo de dado (=== e !==)

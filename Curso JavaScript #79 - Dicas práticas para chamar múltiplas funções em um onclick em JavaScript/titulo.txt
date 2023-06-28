@@ -1,0 +1,1 @@
+Dicas práticas para chamar múltiplas funções em um onclick em JavaScript

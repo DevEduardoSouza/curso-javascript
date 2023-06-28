@@ -1,0 +1,1 @@
+Curso JavaScript #35 - Acessando elementos através do DOM

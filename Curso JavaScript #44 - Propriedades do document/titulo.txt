@@ -1,0 +1,1 @@
+Curso JavaScript #44 - Propriedades do document

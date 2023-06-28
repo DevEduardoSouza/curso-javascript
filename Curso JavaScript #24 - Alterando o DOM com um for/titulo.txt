@@ -1,0 +1,1 @@
+Curso JavaScript #24 - Alterando o DOM com um for
