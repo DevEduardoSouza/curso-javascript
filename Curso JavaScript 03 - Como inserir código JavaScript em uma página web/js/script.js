@@ -1,1 +1,2 @@
-// Adicione o código JavaScript aqui
+// Adicione o cï¿½digo JavaScript aqui
+console.log("Script do head")

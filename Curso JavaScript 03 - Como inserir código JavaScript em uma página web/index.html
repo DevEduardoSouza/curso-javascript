@@ -5,9 +5,28 @@
         <meta charset="UTF-8">
         <title>Curso JavaScript #03 - Como inserir código JavaScript em uma página web</title>
         <link rel="stylesheet" href="css/style.css">
+        <!-- Posso linkar uma arquivo JS aqui 
+            src -> fonte / caminho 
+
+            - Script do head é rederizado antes do html,
+            então para manipular o dom esse modo não é recomendado
+        -->
+        <script src="js/script.js"></script>
     </head>
     <body>
         <h1>Curso JavaScript #03 - Como inserir código JavaScript em uma página web</h1>
+
+        <!-- Posso escrever um código nas tags <script>, mas não é recomendado -->
+        <script>
+            console.log("Script no body")
+        </script>
+
+
+        <!-- Posso linkar uma arquivo JS aqui também.
+
+             Aqui eu espero o html ser carregado para 
+             depois eu manipular
+        -->
         <script src="js/script.js"></script>
     </body>
     </html>
