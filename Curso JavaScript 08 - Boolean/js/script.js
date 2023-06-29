@@ -1,1 +1,16 @@
-// Adicione o código JavaScript aqui
+// Adicione o cï¿½digo JavaScript aqui
+
+
+/** BOOLEAN
+ * 
+ * - valor lÃ³gico , true ou false  
+ */
+
+var verdadeiro = true;
+var falso = false;
+
+
+console.log(verdadeiro);
+console.log(typeof verdadeiro);
+console.log(falso);
+console.log(typeof falso);
