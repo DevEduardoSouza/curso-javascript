@@ -1,1 +1,21 @@
-// Adicione o código JavaScript aqui
+// Adicione o cï¿½digo JavaScript aqui
+
+/** NOT !
+ * 
+ * - muda o valor da expressÃ£o
+ * 
+ */
+
+var idade = 18;
+
+if(!idade >= 18){
+  console.log("passou")
+}
+
+if(!true){
+  console.log("passou");
+}
+
+if(!false){
+  console.log("passou");
+}
