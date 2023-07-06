@@ -1,1 +1,17 @@
-// Adicione o código JavaScript aqui
+// Adicione o cï¿½digo JavaScript aqui
+
+/** THIS
+ * - this vai se referir a instÃ¢ncia e pode acessar suas propriedades
+ * 
+ */
+
+
+console.log(this);
+
+let pessoa = {
+  nome: 'Eduardo',
+  idade: 21,
+  falar: function name() {
+    console.log(this.nome + this.idade);
+  }
+};
