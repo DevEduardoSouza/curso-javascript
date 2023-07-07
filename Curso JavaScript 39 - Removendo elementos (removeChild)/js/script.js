@@ -1,1 +1,24 @@
-// Adicione o código JavaScript aqui
+// Adicione o cï¿½digo JavaScript aqui
+
+/** Removendo elementos (removeChild)
+ * 
+ *  - Posso remover um elemento por completo ou um filho dele
+ */
+
+
+
+// Removendo o elemento filho
+
+// Selecionar o elemento
+var container = document.querySelector(".container");
+// Tenho que passar o filho
+var p = document.querySelector(".container p");
+container.removeChild(p);
+
+
+// remover o elemento 
+
+//selecionar o elemento
+var lista = document.querySelector(".lista");
+// Apenas chamar o mÃ©todo remove
+lista.remove(); 
