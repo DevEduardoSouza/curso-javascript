@@ -1,14 +1,62 @@
 
     <!DOCTYPE html>
-    <html>
+    <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <title>Curso JavaScript #52 - Criando o projeto do curso</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+        
+        <title>Curso JavaScript #52 - To Do</title>
     </head>
     <body>
-        <h1>Curso JavaScript #52 - Criando o projeto do curso</h1>
+        
+
+        <div id="tasks-container">
+
+            <div id="tasks-header">
+                <h2>Salve a sua próxima tarefa:</h2>
+
+                <form id="add-task-from">
+                    <input type="text" id="task-title " placeholder="O que você vai fazer?">
+                    <button id="add-btn" type="submit" >
+                        <ion-icon name="add-outline"></ion-icon>
+                    </button>
+                </form>
+            </div>
+
+            <div id="task-list-container">
+                <h2>Estas são as suas tarefas</h2>
+                <ul id="task-list">
+                    <li class="task-box">
+                        <span class="task-title">Teste</span>
+                        <ion-icon class="done-btn" name="checkmark-outline"></ion-icon>
+                        <ion-icon class="remove-btn" name="close-outline"></ion-icon>
+                    </li>
+                    <li class="task-box">
+                        <span class="task-title">Teste2</span>
+                        <ion-icon class="done-btn" name="checkmark-outline"></ion-icon>
+                        <ion-icon class="remove-btn" name="close-outline"></ion-icon>
+                    </li>
+                    <li class="task-box">
+                        <span class="task-title">Teste3</span>
+                        <ion-icon class="done-btn" name="checkmark-outline"></ion-icon>
+                        <ion-icon class="remove-btn" name="close-outline"></ion-icon>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
         <script src="js/script.js"></script>
+
+        <!-- Links da biblioteca de icons -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
     </html>
+
+
     
