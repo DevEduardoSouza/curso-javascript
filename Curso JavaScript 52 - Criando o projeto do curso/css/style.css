@@ -116,6 +116,11 @@ ion-icon{
   color: #FFF;
   background-color: #ED0927;
 }
+.msg-erro{
+  padding: 2px;
+  display: block;
+  background-color: #ED0927;
+}
 
 .hide{
   display: none;
@@ -125,6 +130,8 @@ ion-icon{
   color: #FFF;
   text-decoration: line-through;
 }
+
+
 
 
 
