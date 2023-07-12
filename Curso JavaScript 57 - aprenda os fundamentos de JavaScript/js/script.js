@@ -1,1 +1,3 @@
-// Adicione o código JavaScript aqui
+// Adicione o cï¿½digo JavaScript aqui
+
+// RevisÃ£o e mais!

@@ -3,7 +3,7 @@
 /** Async e Await - Funções assíncronas em JavaScript
  * 
  * - As funções assícronas funcionam como Promises, porém com sintax mais simples
- * - Precisamos declarar a função com a palvara  async
+ * - Precisamos declarar a função com a palavra  async
  * - E quando precisamos aguarda por algo a instrução precisa de await
  * 
  *  
@@ -38,13 +38,13 @@
 // Prático
 function getUser(id) {
   
-  // Acessar um api que usuários cadastrados
+  // Acessar um api que tem usuários cadastrados
   return fetch(`https://reqres.in/api/user?id=${id}`)
     .then((data) => data.json())
     .catch((err) => console.log(err));
 }
 
-// Eu preciso do await para que o código que retorna um promisse ser executado linha a linha
+// Eu preciso do await para que o código que retorna um Promises ser executado linha a linha
 async function showUserName(id) {
   // posso usar o try cath para exebir um erro se acontecer
   try{
