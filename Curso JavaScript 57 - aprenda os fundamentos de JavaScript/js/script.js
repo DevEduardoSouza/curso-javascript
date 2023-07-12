@@ -102,3 +102,23 @@ console.log(list);
 // Adicionar o inicio elemento da list
 list.unshift('z');
 console.log(list);
+
+
+/* ---------------{Objetos}--------------- */
+
+const product = {
+  name : 'Camisa',
+  price : 15.98,
+  inStock: true,
+  sizes: ['G', 'M', 'P'],
+  'Main color' :  'blue'
+}
+
+console.log(product);
+console.log(product.name);
+console.log(product['Main color']);
+
+// Destructuring -> extrair variáveis de um obj
+const {price, inStock} = product;
+console.log(price);
+console.log(inStock);
