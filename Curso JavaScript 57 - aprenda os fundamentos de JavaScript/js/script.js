@@ -57,3 +57,18 @@ const user = {
 console.log(user);
 console.log(typeof user);
 
+
+/* ---------------{Métodos de string}--------------- */
+
+const fullName = "Eduardo souza";
+console.log(fullName.length); //Propriedades que dar a quantidade de caracteres
+
+const stringToArray = fullName.split(' '); //Seperar e colocar em um array
+console.log(stringToArray);
+
+console.log(fullName.toLocaleUpperCase()); //Deixar tudo em caixa Alta
+console.log(fullName.toLocaleLowerCase()); //Deixar tudo em caixa Baixa
+
+console.log(fullName.indexOf('Eduardo')); //Encontrar um palavra em uma string se não tiver retorna -1
+console.log(fullName.slice(0,8)); //Pegar uma parte da string , tenho que informar onde começa e termina
+
