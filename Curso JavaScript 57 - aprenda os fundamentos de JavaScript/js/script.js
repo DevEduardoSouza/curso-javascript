@@ -163,3 +163,18 @@ console.log(objData);
 objData.map((pessoa)=>{
   console.log(pessoa.nome);
 });
+
+
+/* ---------------{Estrutura condicionais}--------------- */
+
+const a = 10;
+
+if(a > 8){
+  console.log('a é maior que 8');
+}else{
+  console.log('a NÃO é maior que 8');
+}
+
+//ternário
+let testingANumber = 3 > 2 ? true : false;
+console.log(testingANumber);
