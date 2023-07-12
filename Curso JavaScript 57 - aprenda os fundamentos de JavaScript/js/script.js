@@ -72,3 +72,33 @@ console.log(fullName.toLocaleLowerCase()); //Deixar tudo em caixa Baixa
 console.log(fullName.indexOf('Eduardo')); //Encontrar um palavra em uma string se não tiver retorna -1
 console.log(fullName.slice(0,8)); //Pegar uma parte da string , tenho que informar onde começa e termina
 
+
+/* ---------------{Métodos de array}--------------- */
+
+const list = ['a', 'b', 'c', 'd', 'e'];
+
+console.log(list.length); //Retornar a quantidade de elemento
+
+console.log(list[2]); //Buscar um elemento pelo index
+
+list[5] = 'f'; //Add um novo elemento
+console.log(list);
+
+console.log(list[list.length - 1 ]); //Encotrar o último elemento da lista
+
+
+// Adicionar um elemento ao fim da lista
+list.push('g');
+console.log(list);
+
+// Remover um elemento ao fim da lista
+list.pop();
+console.log(list);
+
+// Remover do inicio elemento da list
+list.shift();
+console.log(list);
+
+// Adicionar o inicio elemento da list
+list.unshift('z');
+console.log(list);
