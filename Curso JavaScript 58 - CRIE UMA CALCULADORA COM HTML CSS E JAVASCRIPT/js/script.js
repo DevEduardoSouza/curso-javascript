@@ -5,4 +5,24 @@ const previousOperationText = document.querySelector('#previous-operation');
 //Selecionar o que o usuário está digitando no momento
 const currentOperationText = document.querySelector('#current-operation');
 // Selecionar os Btns
-const button = document.querySelectorAll('#buttons-container button');
+const buttons = document.querySelectorAll('#buttons-container button');
+
+class Calculator{
+
+}
+
+buttons.forEach((button)=>{
+  button.addEventListener('click', (e)=>{
+    // com o event -> tenho várias propriedades
+    const value = e.target.innerText;
+    
+    // esse "+" vai tentar converter esse valor em um número
+    if(+value >= 0 || value === '.'){
+      console.log(value);
+    }else{
+      
+      console.log("op" +value);
+    }
+
+  });
+});
