@@ -240,3 +240,46 @@ console.log(myArrowFunction(2, 9));
 
 const mySimpleArrowFunction = (a,b) => a+b;
 console.log(mySimpleArrowFunction(5,5));
+
+
+/* ---------------{Classes}--------------- */
+
+class Product{
+
+  constructor(name, price){
+    this.name = name
+    this.price = price;
+  }
+
+  productDetails(){
+    return`o nome do produto é ${this.name} e custa ${this.price}`
+  }
+}
+
+const produto = new Product('Camisa', 11);
+const produto2 = new Product('Camisa Azul', 25);
+
+console.log(produto.name);
+console.log(produto.price);
+console.log(produto.productDetails());
+
+// herança
+
+class SuperProduct extends Product{
+  constructor(name, price, size){
+    super(name, price);
+    this.size = size;
+  }
+
+  // static
+  static sayHello(){
+    console.log('Olá');
+  }
+}
+
+const tenis = new SuperProduct('Tenis', 25.99, 45);
+console.log(tenis.name);
+console.log(tenis.price);
+console.log(tenis.size);
+
+SuperProduct.sayHello();
