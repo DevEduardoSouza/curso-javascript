@@ -178,3 +178,22 @@ if(a > 8){
 //ternário
 let testingANumber = 3 > 2 ? true : false;
 console.log(testingANumber);
+
+
+/* ---------------{Estrutura repetição}--------------- */
+
+//While
+const myList = [1,2,3,4,5];
+let counter = 0;
+
+while (counter < myList.length) {
+  console.log(myList[counter]);
+  counter++;
+}
+
+// For
+const mySecondList = ['a','b','c','d','e'];
+
+for (let index = 0; index < mySecondList.length; index++) {
+  console.log(mySecondList[index]);
+}
