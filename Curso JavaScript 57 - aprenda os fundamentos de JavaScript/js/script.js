@@ -283,3 +283,47 @@ console.log(tenis.price);
 console.log(tenis.size);
 
 SuperProduct.sayHello();
+
+/* ---------------{DOM}--------------- */
+
+// Seleção de elemento
+const title = document.getElementById('title');
+console.log(title);
+
+// querySelector
+const sameTitle = document.querySelector('#title');
+console.log(sameTitle);
+
+const texts = document.querySelectorAll('.text');
+console.log(texts);
+console.log(texts[1]);
+
+texts.forEach((text)=>{
+  console.log(text);
+});
+
+
+// Manipulação de elemento
+title.textContent = 'newTitle';
+console.log(title);
+
+// Alterando o HTML
+texts[1].innerHTML = '<span>Usando o innerHTML para alterar o html</span>';
+
+// Add o novo estilo
+texts[1].style.backgroundColor = 'red';
+
+// Add uma nova classe
+texts[1].classList.add('my-class');
+// remove uma nova classe
+texts[1].classList.remove('my-class');
+// remover um elemento do dom
+texts[1].remove();
+
+// Eventos
+
+const btn =  document.querySelector('#btn');
+
+btn.addEventListener('click', ()=>{
+  console.log('Clicou');
+});
