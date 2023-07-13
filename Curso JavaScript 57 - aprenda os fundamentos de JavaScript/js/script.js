@@ -216,3 +216,27 @@ const bigNumbers = [1,2,3,4,5,10,100,1000].filter((number)=>{
   return number >= 5;
 });
 console.log(bigNumbers);
+
+
+/* ---------------{Funções}--------------- */
+
+function minhaFuncao() {
+  console.log('Oi função');
+}
+minhaFuncao();
+
+function nomeCompleto(nome, sobrenome) {
+  return `nome completo: ${nome} ${sobrenome}`;
+}
+
+const meuNomeCompleto = nomeCompleto('Eduardo', 'Souza');
+console.log(meuNomeCompleto);
+
+// Arrow functions
+const myArrowFunction = (a, b)=>{
+  return a + b;
+};
+console.log(myArrowFunction(2, 9));
+
+const mySimpleArrowFunction = (a,b) => a+b;
+console.log(mySimpleArrowFunction(5,5));
