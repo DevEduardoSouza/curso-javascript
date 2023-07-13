@@ -13,6 +13,26 @@ class Calculator{
     this.currentOperationText = currentOperationText;
     this.currentOperation = "";
   }
+
+
+  // Add um digito no "visor"
+  addDigit(digit){
+    // Verificar se a operação atual já tem um 'ponto'
+    if(digit === '.' && this.currentOperationText.innerText.includes('.')){
+      return;
+    }
+    
+    
+    // Colocar o digito no visor
+    this.currentOperation = digit;
+
+    this.updateScreen();
+  }
+  
+  // método para atualizar a screen
+  updateScreen(){
+    this.currentOperationText.innerText += this.currentOperation;
+  }
 }
 
 const calc = new Calculator(previousOperationText, currentOperationText);
@@ -24,9 +44,9 @@ buttons.forEach((button)=>{
     
     // esse "+" vai tentar converter esse valor em um número
     if(+value >= 0 || value === '.'){
-      console.log(value);
+      calc.addDigit(value);
     }else{
-      console.log("op" +value);
+      
     }
 
   });
