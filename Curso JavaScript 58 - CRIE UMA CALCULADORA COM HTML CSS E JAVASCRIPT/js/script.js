@@ -8,8 +8,14 @@ const currentOperationText = document.querySelector('#current-operation');
 const buttons = document.querySelectorAll('#buttons-container button');
 
 class Calculator{
-
+  constructor(previousOperationText, currentOperationText){
+    this.previousOperationText = previousOperationText;
+    this.currentOperationText = currentOperationText;
+    this.currentOperation = "";
+  }
 }
+
+const calc = new Calculator(previousOperationText, currentOperationText);
 
 buttons.forEach((button)=>{
   button.addEventListener('click', (e)=>{
@@ -20,7 +26,6 @@ buttons.forEach((button)=>{
     if(+value >= 0 || value === '.'){
       console.log(value);
     }else{
-      
       console.log("op" +value);
     }
 
