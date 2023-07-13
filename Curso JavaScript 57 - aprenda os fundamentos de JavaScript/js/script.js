@@ -180,7 +180,7 @@ let testingANumber = 3 > 2 ? true : false;
 console.log(testingANumber);
 
 
-/* ---------------{Estrutura repetição}--------------- */
+/* ---------------{Estrutura de repetição}--------------- */
 
 //While
 const myList = [1,2,3,4,5];
@@ -197,3 +197,22 @@ const mySecondList = ['a','b','c','d','e'];
 for (let index = 0; index < mySecondList.length; index++) {
   console.log(mySecondList[index]);
 }
+
+/* ---------------{Métodos de array repetição}--------------- */
+const names = ['Eduardo', 'Souza', 'Silva'];
+
+//ForEach -> Utilização -> Apenas para imprimir
+names.forEach((name)=>{
+  console.log(name);
+})
+
+// Map -> Utilização -> Quando for para modificar algo
+names.map((name)=>{
+  console.log(name);
+})
+
+// Filter -> fazer um filtro dos dados
+const bigNumbers = [1,2,3,4,5,10,100,1000].filter((number)=>{
+  return number >= 5;
+});
+console.log(bigNumbers);
