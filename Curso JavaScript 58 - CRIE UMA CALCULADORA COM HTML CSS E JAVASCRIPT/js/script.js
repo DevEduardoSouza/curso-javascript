@@ -59,6 +59,10 @@ class Calculator{
         operationValue = previous * current;
         this.updateScreen(operationValue, operation, current, previous);
         break;
+      case "DEL":
+        operationValue = previous * current;
+        this.processDelOperator();
+        break;
 
       default:
         return;
@@ -91,6 +95,11 @@ class Calculator{
 
     // Remover o último caractere -> exempo 123 + -> 123 operation
     this.previousOperationText.innerText = this.previousOperationText.innerText.slice(0,-1) + operation;
+  }
+
+  // Deletar o último dígito
+  processDelOperator(){
+    this.currentOperationText.innerText = this.currentOperationText.innerText.slice(0,-1);
   }
 
   // Pocessar todos as operações da calculadora
