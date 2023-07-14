@@ -22,17 +22,79 @@ class Calculator{
       return;
     }
     
-    
     // Colocar o digito no visor
     this.currentOperation = digit;
-
     this.updateScreen();
+  }
+
+  processOparation(operation){
+    // Verificar se o valor de baixo está vazio
+    if(this.currentOperationText.innerText === ''){
+      // Mundança de operação
+      if(this.previousOperationText.innerText !== ''){
+        this.changeOperation(operation);
+      }
+      return;
+    }
+
+    // Tenho que pegar o valor atual e o  anterior
+    let operationValue;
+    const previous = +this.previousOperationText.innerText.split(" ")[0];
+    const current = +this.currentOperationText.innerText;
+
+    switch (operation) {
+      case "+":
+        operationValue = previous + current;
+        this.updateScreen(operationValue, operation, current, previous);
+        break;
+      case "-":
+        operationValue = previous - current;
+        this.updateScreen(operationValue, operation, current, previous);
+        break;
+      case "/":
+        operationValue = previous / current;
+        this.updateScreen(operationValue, operation, current, previous);
+        break;
+      case "*":
+        operationValue = previous * current;
+        this.updateScreen(operationValue, operation, current, previous);
+        break;
+
+      default:
+        return;
+    }
+
   }
   
   // método para atualizar a screen
-  updateScreen(){
-    this.currentOperationText.innerText += this.currentOperation;
+  updateScreen(operationValue = null, operation = null,  current = null, previous = null){
+    
+    if(operationValue === null){
+      this.currentOperationText.innerText += this.currentOperation;
+    }else{
+
+      if(previous === 0){
+        operationValue = current;
+      }
+      // Adicionar o valor de baixo pra cima
+      this.previousOperationText.innerText = `${operationValue} ${operation}`;
+      this.currentOperationText.innerText = '';
+    }
   }
+
+  changeOperation(operation){
+    
+    const mathOperations = ['*','/','+','-'];
+    if(!mathOperations.includes(operation)){
+      return;
+    }
+
+    // Remover o último caractere -> exempo 123 + -> 123 operation
+    this.previousOperationText.innerText = this.previousOperationText.innerText.slice(0,-1) + operation;
+  }
+
+  // Pocessar todos as operações da calculadora
+  
 }
 
 const calc = new Calculator(previousOperationText, currentOperationText);
@@ -46,7 +108,7 @@ buttons.forEach((button)=>{
     if(+value >= 0 || value === '.'){
       calc.addDigit(value);
     }else{
-      
+      calc.processOparation(value);
     }
 
   });
