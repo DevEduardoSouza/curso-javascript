@@ -27,7 +27,7 @@ class Calculator{
     this.updateScreen();
   }
 
-  processOparation(operation){
+  processOperation(operation){
     // Verificar se o valor de baixo está vazio
     if(this.currentOperationText.innerText === '' && operation !== 'C'){
       // Mundança de operação
@@ -67,6 +67,9 @@ class Calculator{
         break;
       case "C":
         this.processClearOperation();
+        break;
+      case "=":
+        this.processEqualOperator();
         break;
 
       default:
@@ -116,7 +119,11 @@ class Calculator{
     this.currentOperationText.innerText = '';
     this.previousOperationText.innerText = '';
   };
-
+  // 
+  processEqualOperator(){
+    const operation = previousOperationText.innerText.split(" ")[1];
+    this.processOperation(operation);
+  }
   // Pocessar todos as operações da calculadora
   
 }
@@ -132,7 +139,7 @@ buttons.forEach((button)=>{
     if(+value >= 0 || value === '.'){
       calc.addDigit(value);
     }else{
-      calc.processOparation(value);
+      calc.processOperation(value);
     }
 
   });
