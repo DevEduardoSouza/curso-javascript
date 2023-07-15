@@ -7,3 +7,13 @@
  * - Caso seja outros verbos, podemos configurar a requisição com: method, body, headers;
  * - O fetch é muito utilizado com frameworks /libs como: React, Vue e Angular
  */
+
+
+// Criar variáveis que serão usadas ao longo do código
+
+// Url da API
+const url = "https://jsonplaceholder.typicode.com/post";
+// Selcionar o loading
+const loading = document.querySelector('#loading');
+// Selecionar o post container
+const postsContainer = document.querySelector('#post-container');
