@@ -76,6 +76,32 @@ async function getPost(id) {
 
   loading.classList.add('hide');
   postPage.classList.remove('hide');
+
+  const title = document.createElement('h1');
+  const body = document.createElement('p');
+
+  title.innerText = dataPost.title;
+  body.innerText = dataPost.body;
+
+  postContainer.appendChild(title);
+  postContainer.appendChild(body);
+
+  dataComments.map((comment)=>{
+    createComment(comment);
+  });
+}
+
+function createComment(comment) {
+  const div = document.createElement('div');
+  const email = document.createElement('h3');
+  const commentBody = document.createElement('p');
+
+  email.innerText = comment.email;
+  commentBody.innerText = comment.body;
+  div.appendChild(email);
+  div.appendChild(commentBody);
+
+  commentsContainer.appendChild(div);
 }
 
 
