@@ -18,6 +18,16 @@ const loading = document.querySelector('#loading');
 // Selecionar o post container
 const postsContainer = document.querySelector('#post-container');
 
+// Criar variáveis que serão usadas para um post só
+const postPage = document.querySelector('#post');
+const postContainer = document.querySelector('#post-container');
+const commentsContainer = document.querySelector('#comments-container');
+
+// Pegar post por id
+// Esse obj tem paramentros da url
+const urlSearchParams = new URLSearchParams(window.location.search);
+const postId = urlSearchParams.get("id");
+
 // Pegar todos os posts
 async function getAllPosts() {
   const response = await fetch(url);
@@ -39,7 +49,7 @@ async function getAllPosts() {
     title.innerText = post.title;
     body.innerText = post.body;
     link.innerText = "Ler";
-    link.setAttribute('href', `/post.html?id=${post.id}`);
+    link.setAttribute("href", `post.html?id=${post.id}`);
     
 
     // Add os elementos na div
@@ -54,4 +64,23 @@ async function getAllPosts() {
 
 }
 
-getAllPosts();
+// Pegar um post individual
+async function getPost(id) {
+  const [responsePost, responseComments] = await Promise.all([
+    fetch(`${url}/${id}`),
+    fetch(`${url}/${id}/comments`)
+  ]);
+
+  const dataPost = await responsePost.json();
+  const dataComments = await responseComments.json();
+
+  loading.classList.add('hide');
+  postPage.classList.remove('hide');
+}
+
+
+if(!postId){
+  getAllPosts();
+}else{
+  getPost(postId);
+}
