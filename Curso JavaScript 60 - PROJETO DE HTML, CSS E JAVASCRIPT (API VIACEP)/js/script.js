@@ -53,12 +53,20 @@ const getAddress = async (cep) => {
   
   // Mostra erro e resetar form
   if(data.erro){
+
+    if(!addressInput.hasAttribute('disabled')){
+      toggleDisabled();
+    }
     // Método nativo que vai limpar o formulário
     addressForm.reset();
     toggleLoader();
     // Mostra a message
     toggleMessage('CEP inválido, tente novamente.');
     return;
+  }
+
+  if(cityInput.value === ''){
+    toggleDisabled();
   }
 
   addressInput.value = data.logradouro;
@@ -68,6 +76,20 @@ const getAddress = async (cep) => {
   toggleLoader();
 
 }
+
+// Add ou remover o disable 
+const toggleDisabled = () =>{
+  if(cityInput.hasAttribute('disabled')){
+    formsInputs.forEach((input)=>{
+      input.removeAttribute('disabled');
+    });
+  }else{
+    formsInputs.forEach((input)=>{
+      input.setAttribute('disabled', 'disabled');
+    });
+  }
+}
+
 
 // Mostra ou esconder loading
 const toggleLoader = () =>{
@@ -94,4 +116,17 @@ const toggleMessage = (msg) => {
 // Close message model 
 closeButton.addEventListener('click', ()=>{
   toggleMessage();
+});
+
+// Salvar endereço
+addressForm.addEventListener('submit', (e)=>{
+  e.preventDefault();
+
+  toggleLoader();
+  setTimeout(()=>{
+      toggleLoader();
+      toggleMessage("Endereço salvo com sucesso");
+      addressForm.reset();
+      toggleDisabled();
+  }, 1000);
 });
