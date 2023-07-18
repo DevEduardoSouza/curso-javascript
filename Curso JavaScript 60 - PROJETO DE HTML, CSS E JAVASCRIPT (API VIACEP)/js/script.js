@@ -7,6 +7,7 @@ const addressInput = document.querySelector('#address');
 const cityInput = document.querySelector('#city');
 const neigthborhoodInput = document.querySelector('#neigthborhood');
 const regionInput = document.querySelector('#region');
+const fadeElement = document.querySelector("#fade");
 // Inputs que vai ser manipulados em massa
 const formsInputs = document.querySelectorAll('[data-input]');
 
@@ -56,6 +57,7 @@ const getAddress = async (cep) => {
     addressForm.reset();
     toggleLoader();
     // Mostra a message
+    toggleMessage('CEP inválido, tente novamente.');
     return;
   }
 
@@ -63,9 +65,27 @@ const getAddress = async (cep) => {
 
 // Mostra ou esconder loading
 const toggleLoader = () =>{
-  const fadeElement = document.querySelector("#fade");
   const loaderElement = document.querySelector("#loader");
-
+  
   fadeElement.classList.toggle('hide');
   loaderElement.classList.toggle('hide');
 }
+
+// Mostra ou esconder mensagem
+const toggleMessage = (msg) => {
+
+  const messageElement = document.querySelector('#message');
+
+  const messageElementText = document.querySelector('#message p');
+
+  messageElementText.innerText = msg;
+
+  fadeElement.classList.toggle('hide');
+  messageElement.classList.toggle('hide');
+
+}
+
+// Close message model 
+closeButton.addEventListener('click', ()=>{
+  toggleMessage();
+});
