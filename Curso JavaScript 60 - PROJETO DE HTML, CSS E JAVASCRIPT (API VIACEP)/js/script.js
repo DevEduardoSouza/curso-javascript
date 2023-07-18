@@ -11,3 +11,17 @@ const regionInput = document.querySelector('#region');
 const formsInputs = document.querySelectorAll('[data-input]');
 
 const closeButton = document.querySelector('#close-message');
+
+// Validar o input de CEP
+cepInput.addEventListener('keypress', (e)=>{
+  const onlyNumbers = /[0-9]/; 
+  const key = String.fromCharCode(e.keyCode);
+  
+  // Permiti apenas números
+  // Vai cair nesse if se o usuário não digitar um número
+  if(!onlyNumbers.test(key)){
+    e.preventDefault();
+    return;
+  }
+
+});
