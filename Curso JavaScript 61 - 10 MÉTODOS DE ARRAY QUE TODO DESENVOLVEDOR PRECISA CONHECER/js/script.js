@@ -40,6 +40,37 @@ console.log(hasFour);
 
 /*-----------{5 - map}-----------*/
 data.map((user)=>{
-  user.newsletter = false;
+  user.newsLetter = false;
 });
 console.log(data);
+
+/*-----------{6 - filter}-----------*/
+// Ele faz um filtro baseada em um condição
+const drives =  data.filter((user)=> user.driverLicense);
+console.log(drives);
+
+/*-----------{7 - reduce}-----------*/
+// 0 é de totalSallary
+const sallariesSum = data.reduce((totalSallary, user)=> totalSallary += user.sallary, 0);
+console.log(sallariesSum);
+
+
+/*-----------{8 - forEach}-----------*/
+const mostraNomeUsuarios = (users) =>{
+  users.forEach(user => {
+    console.log(user.name);
+  }); 
+}
+mostraNomeUsuarios(data);
+
+/*-----------{9 - some}-----------*/
+// Se algum elemento tenha algo que eu queira
+let someNewsletter = data.some((user) => user.newsLetter);
+console.log(someNewsletter);
+
+/*-----------{10 - every }-----------*/
+// Contrário de some
+// Se todo mundo tem a condição que eu estou buscando
+
+const everyUsersHasName = data.every((user)=> user.name);
+console.log(everyUsersHasName);
