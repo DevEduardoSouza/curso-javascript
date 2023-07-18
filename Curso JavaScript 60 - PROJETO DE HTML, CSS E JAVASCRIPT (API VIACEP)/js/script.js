@@ -61,6 +61,12 @@ const getAddress = async (cep) => {
     return;
   }
 
+  addressInput.value = data.logradouro;
+  cityInput.value = data.localidade;
+  // neigthborhoodInput.value = data.bairro;
+  regionInput.value = data.uf;
+  toggleLoader();
+
 }
 
 // Mostra ou esconder loading
