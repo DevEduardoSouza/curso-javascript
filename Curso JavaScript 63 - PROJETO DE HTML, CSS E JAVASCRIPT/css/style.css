@@ -30,6 +30,15 @@ button{
 button:hover{
  opacity: 1;
 }
+
+
+/* Quando a opacidade estiver 1 os eventos vão funcionar */
+#fade, #modal{
+  transition: .5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
 #fade{
     position: fixed;
     top: 0;
@@ -69,4 +78,11 @@ button:hover{
 #fade.hide{
    /* Com a opacidade eu consigo fazer animações já com o display não  */
   opacity: 0;
+  /* Quando a opcaidade estiver em 0 os enventos vão ficar desabilitados */
+  pointer-events: none;
+}
+
+/* Animação */
+#modal.hide{
+  top: 0;
 }
