@@ -1,1 +1,5 @@
-// Adicione o código JavaScript aqui
+// Adicione o cï¿½digo JavaScript aqui
+const changeThemeBtn = document.querySelector('#change-theme');
+changeThemeBtn.addEventListener('change', ()=>{
+    document.body.classList.toggle('dark');
+});
